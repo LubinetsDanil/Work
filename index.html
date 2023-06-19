@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Application</title>
+    <script src="php/oanApplicationManager.php"></script>
+</head>
+<body>
+
+    <h1>Loan Application</h1>
+
+    <form action="process_application.php" method="POST">
+        <h2>Start New Application</h2>
+        <!-- Форма для створення нової заявки -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="amount">Loan Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <hr>
+
+    <h2>Add Lender</h2>
+    <!-- Форма для додавання кредитора -->
+    <form action="add_lender.php" method="POST">
+        <label for="lenderName">Lender Name:</label>
+        <input type="text" id="lenderName" name="lenderName" required>
+
+        <label for="criteria">Criteria:</label>
+        <textarea id="criteria" name="criteria" required></textarea>
+
+        <input type="submit" value="Add Lender">
+    </form>
+
+    <hr>
+
+    <h2>Obtain Quotes</h2>
+    <!-- Форма для отримання пропозицій -->
+    <form action="get_quotes.php" method="POST">
+        <label for="applicationId">Application ID:</label>
+        <input type="number" id="applicationId" name="applicationId" required>
+
+        <input type="submit" value="Get Quotes">
+    </form>
+
+    <hr>
+
+    <h2>Proceed with Selected Quote</h2>
+    <!-- Форма для продовження з обраною пропозицією -->
+    <form action="proceed_with_quote.php" method="POST">
+        <label for="applicationId">Application ID:</label>
+        <input type="number" id="applicationId" name="applicationId" required>
+
+        <label for="quoteId">Quote ID:</label>
+        <input type="number" id="quoteId" name="quoteId" required>
+
+        <input type="submit" value="Proceed">
+    </form>
+</body>
+</html>
