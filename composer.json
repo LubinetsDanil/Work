@@ -1,15 +1,16 @@
+
 {
-    "autoload": {
-      "psr-4": {
-        "YourNamespace\\": "path/to/your/classes/directory"
-      },
-      "files": ["Work/LoanApplicationManager.php/LoanApplicationManager.php"]
+
+    "require": {
+        "Work": "scr"
     },
-    "scripts": {
-      "add-lender": "add_lender.php",
-      "get-quotes": "get_quotes.php",
-      "proceed-with-quote": "proceed_with_quote.php",
-      "process-application": "rocess_application.php"
+
+    "autoload": {
+      "src": ["src/"],
+      "lender": ["src/lender"],
+
+      "psr-4": {
+        "Work\\": "src/"
+      }
     }
   }
-  
